@@ -66,7 +66,13 @@ ggplot(clicks, aes(x = latitude, y = longitude))+
   unique_auct <- auctions %>%
   summarise_all(funs(n_distinct))
   
-```
+ ```
+
+ > unique_auct
+  auction_type_id country     date device_id platform ref_type_id
+1               1       1 19570963    206977        2           2
+  source_id
+1         5
 
 ## Installs
 
