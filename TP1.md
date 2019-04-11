@@ -63,7 +63,16 @@ ggplot(clicks, aes(x = latitude, y = longitude))+
   geom_point()+
   theme_minimal()  
   
-  unique_auct <- auctions %>%
+ ```
+
+
+## Installs
+
+## Events
+
+## Auctions
+```
+ unique_auct <- auctions %>%
   summarise_all(funs(n_distinct))
   
    > unique_auct
@@ -73,11 +82,3 @@ ggplot(clicks, aes(x = latitude, y = longitude))+
 1         5
   
  ```
-
-
-
-## Installs
-
-## Events
-
-## Auctions
