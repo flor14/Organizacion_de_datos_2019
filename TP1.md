@@ -5,7 +5,9 @@ date: "9 de abril de 2019"
 output: html_document
 ---
 
-# Instalo paquetes en R
+Se espera un análisis exploratorio de 4 datasets. Filminas de Jammp <http://bit.ly/2Gcxp71>
+
+## Instalo paquetes en R
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -16,23 +18,18 @@ library(lubridate) #fechas
 library(data.table)
 #install.packages("data.table")
 ```
-## Jammp
 
-Se espera un análisis exploratorio de 4 datasets
-
-Filminas de Jammp <http://bit.ly/2Gcxp71>
-
+## ¿Cuáles son mis datasets?
 ### Datos Transaccionales
 * auctions - Subastas
 
 ### Datos Orgánicos
 Datos producidos por los usuarios
 * clicks 
-
 * installs - Instalaciones de la app
 * events - Eventos
 
-1. Leo todos los dataframes en R
+## 1. Leo todos los dataframes en R
 
 ```{r read all dataframes, include=FALSE}
 
