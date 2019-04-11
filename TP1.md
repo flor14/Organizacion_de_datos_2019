@@ -29,7 +29,7 @@ Datos producidos por los usuarios
 * installs - Instalaciones de la app
 * events - Eventos
 
-## 1. Leo todos los dataframes en R
+## Leo todos los dataframes en R
 
 ```{r read all dataframes, include=FALSE}
 
@@ -43,3 +43,33 @@ auctions <- fread(paste(readLines(gzfile("auctions.csv.gzip")), collapse = "\n")
 
 target <- read.csv("target_competencia.csv")
 ```
+
+## Clicks
+```
+ggplot(clicks_full, aes(x = advertiser_id, y = carrier_id, fill = timeToClick))+
+  geom_raster()+
+  theme_minimal()
+
+library(scales)
+ggplot(clicks_full, aes(x = horas, y = timeToClick))+ 
+  geom_point(alpha = 0.3, colour = "blue")+ 
+  scale_x_datetime(labels=date_format("%H"),
+                   breaks = date_breaks("6 hour"),
+                   minor_breaks=date_breaks("3 hour"))+
+  theme_minimal() 
+  
+  
+ggplot(clicks, aes(x = latitude, y = longitude))+
+  geom_point()+
+  theme_minimal()  
+  
+  unique_auct <- auctions %>%
+  summarise_all(funs(n_distinct))
+  
+```
+
+## Installs
+
+## Events
+
+## Auctions
